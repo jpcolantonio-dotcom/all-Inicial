@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,66 +13,66 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{font-family:system-ui,-apple-system,sans-serif;background:#FF4D00;min-height:100vh}
-.bg{min-height:100vh;background:#FF4D00;display:flex;justify-content:center;align-items:flex-start;padding:16px}
-.login-card{width:100%;max-width:420px;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.15)}
-.login-hero{background:#1A1A1A;padding:28px 24px;display:flex;flex-direction:column;align-items:center;gap:8px}
-.login-title{font-size:22px;font-weight:700;letter-spacing:-1px;color:#fff}
-.login-sub{font-size:11px;color:rgba(255,255,255,0.4)}
-.login-body{padding:20px}
-.field-label{font-size:11px;font-weight:600;color:#1A1A1A;margin-bottom:8px}
-.rest-opt{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:12px;border:2px solid #eee;cursor:pointer;background:#fafafa;margin-bottom:8px;transition:.15s}
+.bg{min-height:100vh;background:#FF4D00;display:flex;justify-content:center;align-items:flex-start;padding:0}
+.login-card{width:100%;max-width:100%;background:#fff;border-radius:0;overflow:hidden;min-height:100vh}
+.login-hero{background:#1A1A1A;padding:40px 24px 28px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.login-title{font-size:24px;font-weight:700;letter-spacing:-1px;color:#fff}
+.login-sub{font-size:12px;color:rgba(255,255,255,0.4)}
+.login-body{padding:24px}
+.field-label{font-size:12px;font-weight:600;color:#1A1A1A;margin-bottom:8px}
+.rest-opt{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;border:2px solid #eee;cursor:pointer;background:#fafafa;margin-bottom:10px;transition:.15s}
 .rest-opt.sel{border-color:#FF4D00;background:#FFF4EF}
-.rest-emoji{font-size:22px;width:40px;height:40px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;border:1px solid #eee;flex-shrink:0}
-.rest-nombre{font-size:13px;font-weight:600;color:#1A1A1A}
-.rest-cat{font-size:10px;color:#888;margin-top:1px}
-.check{margin-left:auto;width:20px;height:20px;border-radius:50%;background:#FF4D00;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;flex-shrink:0}
-.input{width:100%;padding:10px 12px;font-size:13px;border-radius:10px;border:1.5px solid #eee;background:#fafafa;color:#1A1A1A;margin-bottom:14px;outline:none}
-.btn-main{width:100%;padding:13px;background:#FF4D00;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer}
-.phone{width:100%;max-width:420px;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.15)}
-.topbar{padding:14px 16px 10px;background:#fff;border-bottom:1px solid #FFE8DC;display:flex;align-items:center;gap:8px}
-.topbar-name{font-size:13px;font-weight:700;color:#1A1A1A}
-.topbar-sub{font-size:10px;color:#888;margin-top:1px}
+.rest-emoji{font-size:24px;width:44px;height:44px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;border:1px solid #eee;flex-shrink:0}
+.rest-nombre{font-size:14px;font-weight:600;color:#1A1A1A}
+.rest-cat{font-size:11px;color:#888;margin-top:2px}
+.check{margin-left:auto;width:22px;height:22px;border-radius:50%;background:#FF4D00;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;flex-shrink:0}
+.input{width:100%;padding:12px 14px;font-size:14px;border-radius:10px;border:1.5px solid #eee;background:#fafafa;color:#1A1A1A;margin-bottom:16px;outline:none}
+.btn-main{width:100%;padding:15px;background:#FF4D00;color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer}
+.phone{width:100%;max-width:100%;background:#fff;border-radius:0;overflow:hidden;min-height:100vh}
+.topbar{padding:48px 16px 12px;background:#fff;border-bottom:1px solid #FFE8DC;display:flex;align-items:center;gap:8px}
+.topbar-name{font-size:15px;font-weight:700;color:#1A1A1A}
+.topbar-sub{font-size:11px;color:#888;margin-top:2px}
 .estado-badge{margin-left:auto;display:flex;align-items:center;gap:5px}
-.dot{width:7px;height:7px;border-radius:50%}
+.dot{width:8px;height:8px;border-radius:50%}
 .tabs{display:flex;background:#fff;border-bottom:1px solid #FFE8DC}
-.tab{flex:1;padding:10px 4px;font-size:11px;font-weight:600;text-align:center;cursor:pointer;color:#ccc;border-bottom:2px solid transparent}
+.tab{flex:1;padding:12px 4px;font-size:12px;font-weight:600;text-align:center;cursor:pointer;color:#ccc;border-bottom:2px solid transparent}
 .tab.active{color:#FF4D00;border-bottom-color:#FF4D00}
-.scroll{padding:12px;background:#FFF4EF;min-height:400px}
-.toggle-row{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:12px;border:1px solid #FFE8DC}
-.toggle-label{font-size:12px;font-weight:600;color:#1A1A1A}
-.toggle-sub{font-size:10px;color:#888;margin-top:1px}
-.toggle-track{width:42px;height:24px;border-radius:20px;position:relative;cursor:pointer;transition:.2s;flex-shrink:0}
-.toggle-thumb{width:18px;height:18px;border-radius:50%;background:#fff;position:absolute;top:3px;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,0.2)}
-.stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
-.stat{background:#fff;border-radius:12px;padding:10px 12px;border:1px solid #FFE8DC;text-align:center}
-.stat-val{font-size:20px;font-weight:700;color:#1A1A1A}
-.stat-label{font-size:9px;color:#888;margin-top:2px;font-weight:500}
-.section-title{font-size:10px;font-weight:600;color:#888;letter-spacing:1px;margin-bottom:8px}
-.pedido-card{background:#fff;border-radius:14px;border:1px solid #FFE8DC;margin-bottom:10px;overflow:hidden}
-.pedido-head{padding:10px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #FFE8DC}
-.pedido-num{font-size:11px;font-weight:700;color:#FF4D00}
-.pedido-cliente{font-size:12px;font-weight:600;color:#1A1A1A}
-.pedido-hora{font-size:10px;color:#888}
-.tag{font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px}
+.scroll{padding:14px;background:#FFF4EF;min-height:calc(100vh - 140px)}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:12px;padding:14px;margin-bottom:12px;border:1px solid #FFE8DC}
+.toggle-label{font-size:13px;font-weight:600;color:#1A1A1A}
+.toggle-sub{font-size:11px;color:#888;margin-top:2px}
+.toggle-track{width:46px;height:26px;border-radius:20px;position:relative;cursor:pointer;transition:.2s;flex-shrink:0}
+.toggle-thumb{width:20px;height:20px;border-radius:50%;background:#fff;position:absolute;top:3px;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,0.2)}
+.stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+.stat{background:#fff;border-radius:12px;padding:12px;border:1px solid #FFE8DC;text-align:center}
+.stat-val{font-size:22px;font-weight:700;color:#1A1A1A}
+.stat-label{font-size:10px;color:#888;margin-top:2px;font-weight:500}
+.section-title{font-size:10px;font-weight:600;color:#888;letter-spacing:1px;margin-bottom:10px}
+.pedido-card{background:#fff;border-radius:14px;border:1px solid #FFE8DC;margin-bottom:12px;overflow:hidden}
+.pedido-head{padding:12px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #FFE8DC}
+.pedido-num{font-size:12px;font-weight:700;color:#FF4D00}
+.pedido-cliente{font-size:13px;font-weight:600;color:#1A1A1A;margin-top:2px}
+.pedido-hora{font-size:11px;color:#888}
+.tag{font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px}
 .tag-nuevo{background:#FFF0E5;color:#FF4D00;border:1px solid #FFE8DC}
 .tag-prep{background:#FFF9E5;color:#B8860B;border:1px solid #FFE8A0}
 .tag-ok{background:#E8F5E9;color:#2D6A2D;border:1px solid #C8E6C9}
-.pedido-items{padding:8px 12px;border-bottom:1px solid #FFE8DC;font-size:11px;color:#555;line-height:1.8}
-.pedido-footer{padding:8px 12px;display:flex;align-items:center;justify-content:space-between}
-.pedido-total{font-size:12px;font-weight:700;color:#1A1A1A}
-.pedido-dir{font-size:10px;color:#888}
-.btn-confirmar{padding:6px 14px;border-radius:20px;border:none;font-size:11px;font-weight:700;cursor:pointer;background:#FF4D00;color:#fff}
-.btn-listo{padding:6px 14px;border-radius:20px;border:none;font-size:11px;font-weight:700;cursor:pointer;background:#2D6A2D;color:#fff}
-.cat-label{font-size:10px;font-weight:700;color:#FF4D00;letter-spacing:1px;text-transform:uppercase;margin:12px 0 6px}
-.menu-item{background:#fff;border-radius:12px;border:1px solid #FFE8DC;padding:10px 12px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
-.menu-nombre{font-size:12px;font-weight:600;color:#1A1A1A}
-.menu-desc{font-size:10px;color:#888;margin-top:1px}
-.menu-precio{font-size:13px;font-weight:700;color:#FF4D00}
-.icon-btn{width:28px;height:28px;border-radius:8px;background:#FFF4EF;border:1px solid #FFE8DC;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px}
-.btn-add-prod{width:100%;padding:11px;background:#FFF4EF;color:#FF4D00;border:1.5px dashed #FF4D00;border-radius:12px;font-size:12px;font-weight:700;cursor:pointer;margin-top:4px}
-.info-card{background:#fff;border-radius:12px;border:1px solid #FFE8DC;padding:12px 14px;margin-bottom:8px}
-.info-label{font-size:10px;color:#888;margin-bottom:4px}
-.info-val{font-size:13px;font-weight:600;color:#1A1A1A}
+.pedido-items{padding:10px 14px;border-bottom:1px solid #FFE8DC;font-size:12px;color:#555;line-height:2}
+.pedido-footer{padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
+.pedido-total{font-size:13px;font-weight:700;color:#1A1A1A}
+.pedido-dir{font-size:11px;color:#888;margin-top:2px}
+.btn-confirmar{padding:8px 16px;border-radius:20px;border:none;font-size:12px;font-weight:700;cursor:pointer;background:#FF4D00;color:#fff}
+.btn-listo{padding:8px 16px;border-radius:20px;border:none;font-size:12px;font-weight:700;cursor:pointer;background:#2D6A2D;color:#fff}
+.cat-label{font-size:10px;font-weight:700;color:#FF4D00;letter-spacing:1px;text-transform:uppercase;margin:14px 0 8px}
+.menu-item{background:#fff;border-radius:12px;border:1px solid #FFE8DC;padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.menu-nombre{font-size:13px;font-weight:600;color:#1A1A1A}
+.menu-desc{font-size:11px;color:#888;margin-top:2px}
+.menu-precio{font-size:14px;font-weight:700;color:#FF4D00}
+.icon-btn{width:32px;height:32px;border-radius:8px;background:#FFF4EF;border:1px solid #FFE8DC;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px}
+.btn-add-prod{width:100%;padding:13px;background:#FFF4EF;color:#FF4D00;border:1.5px dashed #FF4D00;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;margin-top:6px}
+.info-card{background:#fff;border-radius:12px;border:1px solid #FFE8DC;padding:14px;margin-bottom:10px}
+.info-label{font-size:11px;color:#888;margin-bottom:4px}
+.info-val{font-size:14px;font-weight:600;color:#1A1A1A}
 .hidden{display:none}
 </style>
 </head>
@@ -83,7 +82,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#FF4D00;min-heigh
 <div id="screen-login" class="bg">
   <div class="login-card">
     <div class="login-hero">
-      <svg width="60" height="60" viewBox="0 0 60 60">
+      <svg width="64" height="64" viewBox="0 0 60 60">
         <circle cx="30" cy="30" r="26" fill="none" stroke="#FF4D00" stroke-width="4"
           stroke-dasharray="140 24" stroke-dashoffset="-4" stroke-linecap="round"/>
         <circle cx="50" cy="13" r="4" fill="#FFD166"/>
@@ -108,7 +107,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#FF4D00;min-heigh
         <div class="rest-emoji">🍣</div>
         <div><div class="rest-nombre">Kusama Sushi</div><div class="rest-cat">Sushi · Mariscos</div></div>
       </div>
-      <div class="field-label" style="margin-top:16px">Contraseña</div>
+      <div class="field-label" style="margin-top:20px">Contraseña</div>
       <input type="password" placeholder="••••••••" class="input"/>
       <button class="btn-main" onclick="ingresar()">Ingresar →</button>
     </div>
@@ -125,7 +124,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#FF4D00;min-heigh
       </div>
       <div class="estado-badge">
         <div class="dot" id="estado-dot" style="background:#2D6A2D"></div>
-        <span id="estado-texto" style="color:#2D6A2D;font-size:11px;font-weight:600">Abierto</span>
+        <span id="estado-texto" style="color:#2D6A2D;font-size:12px;font-weight:600">Abierto</span>
       </div>
     </div>
     <div class="tabs">
@@ -140,7 +139,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#FF4D00;min-heigh
           <div class="toggle-sub" id="toggle-sub-text">Recibiendo pedidos</div>
         </div>
         <div class="toggle-track" id="toggle-track" style="background:#2D6A2D" onclick="toggleAbierto()">
-          <div class="toggle-thumb" id="toggle-thumb" style="left:21px"></div>
+          <div class="toggle-thumb" id="toggle-thumb" style="left:23px"></div>
         </div>
       </div>
       <div class="stats-row">
@@ -300,7 +299,7 @@ function toggleAbierto() {
   var sub = document.getElementById('toggle-sub-text')
   if (abierto) {
     track.style.background = '#2D6A2D'
-    thumb.style.left = '21px'
+    thumb.style.left = '23px'
     dot.style.background = '#2D6A2D'
     texto.style.color = '#2D6A2D'
     texto.textContent = 'Abierto'
